@@ -12,34 +12,59 @@ body {
   font-family: 'Courier New', monospace;
   font-size: 32px;
 }
+h1 {
+  text-align: center;
+  color: black
+}
 
 h2 {
   color: 501BA8;
   text-align: center;
 }
 
+p {
+  text-align: center;
+  font-size: 16px;
+}
 
 button {
   border: 501BA8;
-  padding: 10px 32px; 
-  color: black ; 
-  font-size: 26px;
+  padding: 10px 5px; 
+  color: purple ; 
+  font-size: 20px;
   text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button:hover {
+  color: pink;
 }
 
 form {
   text-align: center;
+  font-size: 20px;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 {% endblock %}
 
 {% block content %} 
-<h2> Log In </h2>
+<h1> The Feminine Coder ® </h1>
+<h2> Authorisation Required </h2>
 {% load static %}
-<img src="{% static 'images/computer.png' %}" alt="computer">
+<img src="{% static 'images/computer.png' %}" alt="computer" 
+style="width: 150px; height:150px;" class="center">
+<p> Please enter your username and password to access the network. Happy programming :) </p>
 <form method = "post" >
   {% csrf_token %}
   {{ form.as_p }}
-  <button type = "submit"> Log In </button>
+  <button type = "submit"> Confirm </button>
 </form> 
-{% endblock %} 
+{% endblock %}
