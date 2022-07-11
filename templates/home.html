@@ -4,7 +4,8 @@
 
 {%block style%}
 body {
-  background-color: A95C68 ;
+  background-color: 550A35 ;
+  color: white;
   font-family: 'Courier New', monospace;
   font-size: 32px;
   text-align: center;
@@ -12,9 +13,9 @@ body {
 }
 
 a {
-  color: black;
+  color: white;
   text-align: center;
-  fonr-size: 16px;
+  font-size: 16px;
 }
 
 a:hover {
@@ -27,7 +28,7 @@ a:hover {
 
 {% block content %}
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
+  Welcome back {{ user.username }}!
   <p><a href="{% url 'logout' %}">Log Out</a></p>
   <p><a href = "{% url 'password_reset' %}">Reset Password</a></p>
 {% else %}
