@@ -5,7 +5,7 @@
 {%block style%}   
 
 body {
-  background-color: EBDEF0 ;
+  background-color: c9c0bb ;
   color: black;
   font-family: 'Georgia', serif;
   font-size: 16px;
@@ -46,7 +46,7 @@ input[type=submit] {
 
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: 8a7f80;
   padding: 20px;
 }
 
@@ -79,6 +79,18 @@ input[type=submit] {
   }
 }
 
+
+
+button {
+  border: 501BA8;
+  padding: 2px 5px; 
+  color: black ; 
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
 {%endblock%}
 
 
@@ -94,7 +106,7 @@ input[type=submit] {
 
   </form>
   <div class="container">
-  <form action="action_page.php">
+  <form action="helpform">
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name</label>
@@ -105,10 +117,10 @@ input[type=submit] {
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">Last Name</label>
+        <label for="email">E-Mail</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="email" name="E-Mail" placeholder="Your e-mail address..">
       </div>
     </div>
     <div class="row">
